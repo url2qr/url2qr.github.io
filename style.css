@@ -8,12 +8,20 @@
   font-weight: 600;
 }
 
+html {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100%;
+  align-items: stretch;
+}
+
 body {
   font-family: sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   background-color: #f0f0f0;
 }
 
