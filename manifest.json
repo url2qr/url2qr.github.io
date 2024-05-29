@@ -18,8 +18,8 @@
     }
   ],
   "share_target": {
-    "action": "/",
-    "method": "GET",
+    "action": "/share",
+    "method": "POST",
     "params": {
       "url": "link"
     }
