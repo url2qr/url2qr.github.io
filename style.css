@@ -30,6 +30,11 @@ body {
   box-sizing: border-box;
   padding: 10px;
   flex: 1;
+  border: white;
+}
+
+#linkInput::focus {
+  border: black;
 }
 
 button {
@@ -58,6 +63,7 @@ button {
   align-items: stretch;
   gap: 8px;
   width: 276px;
+  margin-top: 16px;
 }
 
 #input-section > * {
