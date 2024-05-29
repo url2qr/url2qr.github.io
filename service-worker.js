@@ -25,12 +25,12 @@ self.addEventListener("fetch", async (event) => {
   const url = new URL(event.request.url);
 
   if (url.pathname === "/share") {
-    const formData = await event.request.formData();
-    const link = formData.get("link") || "";
-
-    // Handle the sharedData here (e.g., generate QR code for sharedLink)
-    setDbg(`hei: ${link}`);
-
-    event.respondWith(new Response("Shared data received!", { status: 200 }));
   }
+  const formData = await event.request.formData();
+  const link = formData.get("link") || formData.get("link-backup") || "";
+
+  // Handle the sharedData here (e.g., generate QR code for sharedLink)
+  setDbg(`hei: ${link} ${formData.get("link-backup")}`);
+
+  event.respondWith(new Response("Shared data received!", { status: 200 }));
 });
