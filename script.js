@@ -1,5 +1,10 @@
+const linkInput = document.getElementById("linkInput");
+
 function setParameters() {
-  const linkInput = document.getElementById("linkInput");
+  const newParams = new URLSearchParams();
+  newParams.set("link", linkInput.value);
+  const fullURL = "/?" + newParams.toString();
+  window.location.href = fullURL;
 }
 
 function generateQR() {
@@ -7,6 +12,8 @@ function generateQR() {
 
   // Get a specific parameter value
   const link = urlParams.get("link");
+
+  linkInput.value = link;
 
   if (link) {
     const qrcodeContainer = document.getElementById("qrcode");
@@ -25,6 +32,12 @@ function generateQR() {
 
 function onLoad() {
   generateQR();
+
+  linkInput.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      setParameters();
+    }
+  });
 }
 
 onLoad();
