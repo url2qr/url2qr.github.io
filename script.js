@@ -23,15 +23,8 @@ function generateQR() {
   }
 }
 
-function setDbg(x) {
-  const dbg = document.getElementById("dbg");
-  dbg.innerHTML = x;
-}
-
 function onLoad() {
   generateQR();
-
-  setDbg(window.location.search.toString());
 }
 
 onLoad();
