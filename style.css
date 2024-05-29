@@ -18,20 +18,18 @@ body {
 }
 
 .container {
-  background-color: white;
   padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 12px;
 }
 
 #linkInput {
-  width: 100%;
   box-sizing: border-box;
   padding: 10px;
+  flex: 1;
 }
 
 button {
@@ -46,6 +44,9 @@ button {
   height: 256px;
   width: 256px;
   background-color: #f0f0f0;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 12px;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -56,8 +57,10 @@ button {
   box-sizing: border-box;
   align-items: stretch;
   gap: 8px;
+  width: 276px;
 }
 
 #input-section > * {
   border-radius: 7px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
