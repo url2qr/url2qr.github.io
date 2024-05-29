@@ -15,12 +15,13 @@ self.addEventListener("install", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
-  setDbg("sharedData.link");
-
   function setDbg(x) {
     const dbg = document.getElementById("dbg");
     dbg.innerHTML = x;
   }
+
+  setDbg("sharedData.link");
+
   const url = new URL(event.request.url);
 
   if (url.pathname === "/") {
