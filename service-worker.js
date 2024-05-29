@@ -15,6 +15,8 @@ self.addEventListener("install", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
+  setDbg("sharedData.link");
+
   function setDbg(x) {
     const dbg = document.getElementById("dbg");
     dbg.innerHTML = x;
@@ -27,7 +29,7 @@ self.addEventListener("fetch", (event) => {
     };
 
     // Handle the sharedData here (e.g., generate QR code for sharedLink)
-    setDbg(sharedData.link);
+    setDbg(`hei: ${sharedData.link}`);
 
     event.respondWith(new Response("Shared data received!", { status: 200 }));
   }
