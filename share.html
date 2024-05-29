@@ -1,0 +1,22 @@
+<html>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <body>
+    <div id="dbg"></div>
+  </body>
+  <script>
+    function setDbg(x) {
+      const dbg = document.getElementById("dbg");
+      dbg.innerHTML = x;
+    }
+
+    window.addEventListener("load", () => {
+      const parsedUrl = new URL(window.location);
+      const { searchParams } = parsedUrl;
+      console.log("Title shared:", searchParams.get("name"));
+      console.log("Text shared:", searchParams.get("description"));
+      console.log("URL shared:", searchParams.get("link"));
+
+      setDbg(parsedUrl);
+    });
+  </script>
+</html>

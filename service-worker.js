@@ -13,24 +13,3 @@ self.addEventListener("install", (event) => {
   //     })
   //   );
 });
-
-self.addEventListener("fetch", async (event) => {
-  function setDbg(x) {
-    const dbg = document.getElementById("dbg");
-    dbg.innerHTML = x;
-  }
-
-  setDbg("sharedData.link");
-
-  const url = new URL(event.request.url);
-
-  if (url.pathname === "/share") {
-  }
-  const formData = await event.request.formData();
-  const link = formData.get("link") || formData.get("link-backup") || "";
-
-  // Handle the sharedData here (e.g., generate QR code for sharedLink)
-  setDbg(`hei: ${link} ${formData.get("link-backup")}`);
-
-  event.respondWith(new Response("Shared data received!", { status: 200 }));
-});

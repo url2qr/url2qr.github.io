@@ -18,12 +18,11 @@
     }
   ],
   "share_target": {
-    "action": "/share",
-    "method": "POST",
-    "enctype": "multipart/form-data",
+    "action": "share.html",
     "params": {
-      "url": "link",
-      "text": "link-backup"
+      "title": "name",
+      "text": "description",
+      "url": "link"
     }
   }
 }
