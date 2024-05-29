@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-weight: 600;
+}
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#linkInput {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#qrcode {
+  margin-top: 20px;
+  height: 256px;
+  width: 256px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#input-section {
+  display: flex;
+  height: 40px;
+  box-sizing: border-box;
+  align-items: stretch;
+  gap: 8px;
+}
+
+#input-section > * {
+  border-radius: 7px;
+}
