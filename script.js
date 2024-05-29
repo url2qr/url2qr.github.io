@@ -7,7 +7,6 @@ function generateQR() {
 
   // Get a specific parameter value
   const link = urlParams.get("link");
-  console.log(link);
 
   if (link) {
     const qrcodeContainer = document.getElementById("qrcode");
@@ -25,3 +24,6 @@ function generateQR() {
 }
 
 generateQR();
+
+const dbg = document.getElementById("dbg");
+dbg.innerHTML = window.location.search.toString();
