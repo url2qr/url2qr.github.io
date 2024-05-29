@@ -12,11 +12,17 @@
     window.addEventListener("load", () => {
       const parsedUrl = new URL(window.location);
       const { searchParams } = parsedUrl;
+      const link =
+        searchParams.get("link") || searchParams.get("description") || "";
       console.log("Title shared:", searchParams.get("name"));
       console.log("Text shared:", searchParams.get("description"));
       console.log("URL shared:", searchParams.get("link"));
 
-      setDbg(parsedUrl);
+      const newParams = new URLSearchParams();
+      newParams.set("link", link);
+      const fullURL = "/?" + newParams.toString();
+      setDbg(fullURL);
+      window.location.href = fullURL;
     });
   </script>
 </html>
